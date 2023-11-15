@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Web Fundamentals Workshop</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#" class="icon solid fa-home"><span>Home</span></a>
+						<a href="#work2" class="icon solid fa-folder"><span>身高</span></a>
+						<a href="#work3" class="icon solid fa-folder"><span>縣市均薪</span></a>
+						<a href="#work4" class="icon solid fa-folder"><span>天然氣進口</span></a>
+						<a href="#work5" class="icon solid fa-folder"><span>化燃進口</span></a>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- Me -->
+							<article id="home" class="panel intro">
+								<style>
+									.panel.intro header h1 {
+										font-size: 30px; 
+									}
+									.panel.intro header p {
+										font-size: 20px;
+									}
+									.panel.intro body img {
+										width: 10%; 
+										height: auto; 
+									}
+								</style>
+								<header>
+									<h1>111502517 張高睿</h1>
+									<p>Data Viz- 1115</p>
+								</header>
+								<body>
+									<img src="images/bug.jpg" alt="" />
+								</body>
+							</article>
+
+						<!-- work2 -->
+							<article id="work2" class="panel">
+								<header>
+									<h2>身高散佈圖</h2>
+								</header>
+								<p>
+									以下是有關台灣青少年在6~15歲的身高散佈圖
+								</p>
+								<section>
+									<div id="myGraphW2"></div>
+								</section>
+								<style>
+									p {
+										text-indent: 20px;
+									}
+								</style>
+								<p>&nbsp;&nbsp;&nbsp;由上圖可發現：
+									<br>&nbsp;&nbsp;&nbsp;1.	在10~11歲時，女性平均身高大於男性
+									<br>&nbsp;&nbsp;&nbsp;2.	男女的身高在分歧前有很穩定的斜率
+									<br>&nbsp;&nbsp;&nbsp;3.	男女平均身高的生長趨勢在12歲時出現分歧</p>
+								<a href="https://data.gov.tw/dataset/6283">資料來源</a>
+							</article>
+						<!-- work3 -->
+							<article id="work3" class="panel">
+								<header>
+									<h2>台灣四縣市平均年薪資長條圖</h2>
+								</header>
+								<style>
+									p {
+										text-indent: 20px;
+									}
+								</style>
+								<p>
+									由於時常在網路新聞與主流媒體上看到有關各縣市的平均薪資調查，
+									我就想來自己看看實際上政府提供的數據能告訴我甚麼以前沒注意到的細節。
+									以下是有關台灣四個縣市從2010年到2023年的數據
+								</p>	
+								<section>
+									<div id="myGraphW3"></div>
+								</section>
+								<p>
+									觀察上圖後：
+									<br>1.	新竹市的平均薪資在許多年份是與台北相當的
+									<br>2.	新竹市的平均薪資變動很大
+									<br>3.	新北市與桃園市的平均薪資在近十年有越來越靠近的趨勢
+								</p>
+								<a href="https://data.gov.tw/dataset/9418">資料來源</a>
+							</article>
+						<!-- work4 -->
+							<article id="work4" class="panel">
+								<header>
+									<h2>液化石油氣進口圓餅圖</h2>
+								</header>
+								<style>
+									p {
+										text-indent: 20px;
+									}
+								</style>
+								<p>
+									由於我對環保議題有興趣，前些時間有做台灣燃料的報告，就想說用這次的機會更進一步了解台灣化石燃料進口的組成。
+								</p>	
+								<section>
+									<div id="myGraphW4"></div>
+									<div id="myGraphW4_2"></div>
+								</section>
+								<p>
+									觀察上兩圖後：
+									<br>1.	澳大利亞對台灣天然氣進口佔比非常大
+									<br>2.	完全沒有中國的天然氣進口
+									<br>3.	相比20年前，台灣的天然氣進口組成健康很多
+									
+								</p>
+								<a href="https://data.gov.tw/dataset/163715">資料來源</a>
+							</article>
+						<!-- work5 -->
+							<article id="work5" class="panel">
+								<header>
+									<h2>近二十年化石燃料進口比較長條圖</h2>
+								</header>
+								<style>
+									p {
+										text-indent: 40px;
+									}
+								</style>
+								<p>
+									由於在查找資料時，我發現台灣的天然氣燃料進口量近20年幾乎在穩定增加中，因此我想看看不同燃料之間是否有相同的現象
+								</p>	
+								<section>
+									<div id="myGraphW5"></div>
+								</section>
+						
+								<p>
+									由上圖可知：
+									<br>1.	煤礦一直是台灣最主要的進口燃料
+									<br>2.	只有天然氣在逐年增加進口量
+									<br>3.	從2004年開始，燃料的進口量變動量不大
+								</p>
+								<head>
+									<h2>額外發現</h2>
+								</head>
+								
+								<p>
+									<br>
+									我原先在做這個圖時出現了bug，console裡沒有出現錯誤，問chatGPT也無法找出錯誤，但第二個與第三個trace就是無法呈現數據。
+									我認為是在合併時出現錯誤，因為console所有的res元素只有第一個.csv檔的數據有跑出來。
+									chatGPT認為是promise.all()這個函數錯了，我覺得這個錯誤挺有趣的所以就保留下來了。
+									後來我把三個.csv檔裡會用到的數據合併在一個.csv檔裡，再跑程式後圖片就出來了。
+									證實了是promise.all()的問題，但我還是不會正確的合併多檔，希望老師之後可以再觸及一下。
+								</p>
+								<a href="https://data.gov.tw/dataset/163715">液化天然氣進口資料來源</a>
+								<a href="https://data.gov.tw/dataset/163714">原油進口資料來源</a>
+								<a href="https://data.gov.tw/dataset/163716">煤進口資料來源</a>
+							</article>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="//unpkg.com/d3"></script>
+			<script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+			<script src="work2_StudentsHeightAverage/work2main.js"></script>
+			<script src="work3_TaiwanAverageRevenue/work3main.js"></script>
+			<script src="work4_Gas/work4main.js"></script>
+			<script src="work5_H_F/work5main.js"></script>
+	</body>
+</html>
